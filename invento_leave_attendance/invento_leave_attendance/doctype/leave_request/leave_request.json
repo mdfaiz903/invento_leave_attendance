@@ -36,7 +36,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Pending\nApprovel\nRejected"
+   "options": "Pending\nApproved\nRejected"
   },
   {
    "fieldname": "column_break_lwqd",
@@ -74,7 +74,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-19 22:02:06.138801",
+ "modified": "2025-08-19 23:46:14.489762",
  "modified_by": "Administrator",
  "module": "Invento Leave Attendance",
  "name": "Leave Request",
