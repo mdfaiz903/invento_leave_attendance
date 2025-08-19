@@ -4,7 +4,7 @@ app_publisher = "faiz"
 app_description = "HR Leave & Attendance Module"
 app_email = "faiz@gmail.com"
 app_license = "mit"
-gsgsg
+
 # Apps
 # ------------------
 
