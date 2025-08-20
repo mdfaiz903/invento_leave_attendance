@@ -3,7 +3,7 @@
 
 frappe.ui.form.on("Leave Request", {
 	refresh(frm) {
-        if(frm.doc.status === "Pending")
+        if(frm.doc.status === "Pending" && frappe.user.has_role("HR Manager"))
         frm.add_custom_button(__("Approve"),function(){
             frm.set_value("status","Approved")
             frm.set_value("approved_by",frappe.session.user)
