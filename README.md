@@ -72,32 +72,26 @@ Rejected Leaves
 
 Grouped by Employee
 
-<img width="1883" height="1017" alt="image" src="./Screenshot/Leave_request_doc.png"/>
-
+📷 Screenshots
 Leave Request Doc
+<img src="Screenshot/Leave_request_doc.png" alt="Leave Request Doc" />
 
-<img width="1883" height="1017" alt="image" src="./Screenshot/approved.png">
+Approved
+<img src="Screenshot/approved.png" alt="Leave Request Doc Approved" />
 
-Leave Request Doc Approved
+Rejected
+<img src="Screenshot/rejected.png" alt="Leave Request Doc Rejected" />
 
-<img width="1883" height="1017" alt="image" src="./Screenshot/rejected.png">
+Pending
+<img src="Screenshot/pending.png" alt="Leave Request Doc Pending" />
 
-Leave Request Doc Rejected
-
-<img width="1883" height="1017" alt="image" src="./Screenshot/pending.png">
-
-Leave Request Doc Pending
-
-<img width="1883" height="1017" alt="image" src="./Screenshot/EL Message throw.png">
-
-Leave Request Doc Earn Leave msg
-
-<img width="1883" height="1017" alt="image" src="./Screenshot/leave_summary_report.png">
+Earned Leave Message
+<img src="Screenshot/EL_Message_throw.png" alt="Leave Request Doc Earn Leave msg" />
 
 Leave Summary Report
-
-<img width="1883" height="1017" alt="image" src="./Screenshot/print_view.png">
+<img src="Screenshot/leave_summary_report.png" alt="Leave Summary Report" />
 
 Print View of Report
+<img src="Screenshot/print_view.png" alt="Print View of Report" />
 
 
