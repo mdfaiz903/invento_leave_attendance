@@ -25,15 +25,27 @@ def get_columns() -> list[dict]:
 	"""
 	return [
 		{
-			"label": _("Column 1"),
-			"fieldname": "column_1",
-			"fieldtype": "Data",
+			"label": _("Employee"),
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"options":"Employee"
 		},
 		{
-			"label": _("Column 2"),
-			"fieldname": "column_2",
+			"label": _("Total Leave Requests"),
+			"fieldname": "total_lev_req",
 			"fieldtype": "Int",
 		},
+		{
+			"label": _("Approved Leaves"),
+			"fieldname": "approved_leaves",
+			"fieldtype": "Int",
+		},
+		{
+			"label": _("Rejected Leaves"),
+			"fieldname": "rejected_leaves",
+			"fieldtype": "Int",
+		},
+		
 	]
 
 
@@ -43,6 +55,6 @@ def get_data() -> list[list]:
 	The report data is a list of rows, with each row being a list of cell values.
 	"""
 	return [
-		["Row 1", 1],
-		["Row 2", 2],
+		["emp1", 9, 5,2],
+		# ["Row 2", 2],
 	]
