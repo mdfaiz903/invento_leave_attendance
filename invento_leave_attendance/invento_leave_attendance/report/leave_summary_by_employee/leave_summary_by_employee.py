@@ -1,7 +1,7 @@
 # Copyright (c) 2025, faiz and contributors
 # For license information, please see license.txt
 
-# import frappe
+import frappe
 from frappe import _
 
 
@@ -54,7 +54,16 @@ def get_data() -> list[list]:
 
 	The report data is a list of rows, with each row being a list of cell values.
 	"""
-	return [
-		["emp1", 9, 5,2],
-		# ["Row 2", 2],
-	]
+	
+	records = frappe.db.sql("""
+				SELECT
+					employee,
+					COUNT(*) AS total_lev_req,
+					SUM(CASE WHEN status = 'Approved' THEN 1 ELSE 0 END) AS approved_leaves,
+					SUM(CASE WHEN status = 'Rejected' THEN 1 ELSE 0 END) AS rejected_leaves
+				FROM `tabLeave Request`
+				GROUP BY employee
+				ORDER BY employee
+					
+				""",as_dict=True)
+	return records
