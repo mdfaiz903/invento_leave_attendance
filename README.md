@@ -12,7 +12,7 @@ Repository: [invento_leave_attendance](https://github.com/mdfaiz903/invento_leav
 ## 🛠️ Installation
 
 ### 1. Setup Frappe Bench (v16 dev)
-```bash
+
 # Install bench if not already installed
 pip install frappe-bench
 
@@ -21,18 +21,26 @@ bench init frappe-bench --frappe-branch version-16
 cd frappe-bench
 
 # Create site
+```bash
 bench new-site site_name
-2. Get the App
+```
+# Get the App
+```bash
 cd apps
-git clone https://github.com/mdfaiz903/invento_leave_attendance.git
+git clone https://github.com/mdfaiz903/invento_leave_attendance.git```
 cd ..
-3. Install on Site
+```
+# Install on Site
+```bash 
 bench --site site_name install-app invento_leave_attendance
+```
+```bash
 bench start
+```
 
 
 # Features & Functionality
-📌 Leave Request Doctype
+### Leave Request Doctype
 Employee (linked to ERPNext Employee Doc)
 
 From Date / To Date validation
@@ -45,12 +53,12 @@ Approved By (auto-filled when approved)
 
 Total Days (auto-calculated excluding weekends)
 
-📌 Server-side validations
+ ### Server-side validations
 From Date must be before To Date
 
 Maximum leave duration: 5 days
 
-📌 Client-side logic
+### Client-side logic
 Auto-calculate Total Days excluding Saturday & Sunday
 
 Show info message when Leave Type = EL
@@ -61,7 +69,7 @@ Visible only to HR Manager when status = Pending
 
 Sets Status = Approved and Approved By = current user
 
-📌 Script Report: Leave Summary by Employee
+### Script Report: Leave Summary by Employee
 Employee
 
 Total Leave Requests
@@ -72,7 +80,7 @@ Rejected Leaves
 
 Grouped by Employee
 
-📷 Screenshots
+### Screenshots
 Leave Request Doc
 <img src="Screenshot/Leave_request_doc.png" alt="Leave Request Doc" />
 
@@ -86,7 +94,7 @@ Pending
 <img src="Screenshot/pending.png" alt="Leave Request Doc Pending" />
 
 Earned Leave Message
-<img src="Screenshot/EL_Message_throw.png" alt="Leave Request Doc Earn Leave msg" />
+<img src="Screenshot/EL Message throw.png" alt="Leave Request Doc Earn Leave msg" />
 
 Leave Summary Report
 <img src="Screenshot/leave_summary_report.png" alt="Leave Summary Report" />
