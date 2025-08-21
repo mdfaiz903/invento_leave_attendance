@@ -1,8 +1,6 @@
 # HR Leave & Attendance Module
-
 A simple **custom Frappe app** for managing Leave Requests and Attendance approvals.  
 Built with **Frappe Framework v16 (dev)**.  
-
 Repository: [invento_leave_attendance](https://github.com/mdfaiz903/invento_leave_attendance)  
 (Current branch: `develop`)
 (Production branch: `main`)
@@ -12,7 +10,7 @@ Repository: [invento_leave_attendance](https://github.com/mdfaiz903/invento_leav
 ## 🛠️ Installation
 
 ### 1. Setup Frappe Bench (v16 dev)
-
+```bash
 # Install bench if not already installed
 pip install frappe-bench
 
@@ -21,85 +19,82 @@ bench init frappe-bench --frappe-branch version-16
 cd frappe-bench
 
 # Create site
-```bash
 bench new-site site_name
 ```
-# Get the App
+
+### 2. Get Required Apps
 ```bash
+# Get ERPNext and dependencies
+bench get-app erpnext 
+bench get-app https://github.com/frappe/hrms.git 
+bench get-app https://github.com/frappe/payments.git
+
+# Get the custom app
 cd apps
-git clone https://github.com/mdfaiz903/invento_leave_attendance.git```
+git clone https://github.com/mdfaiz903/invento_leave_attendance.git
 cd ..
 ```
-# Install on Site
+
+### 3. Install on Site
 ```bash 
 bench --site site_name install-app invento_leave_attendance
 ```
+
 ```bash
 bench start
 ```
 
+---
 
-# Features & Functionality
+## Features & Functionality
+
 ### Leave Request Doctype
-Employee (linked to ERPNext Employee Doc)
+- Employee (linked to ERPNext Employee Doc)
+- From Date / To Date validation
+- Leave Type (CL, SL, EL)
+- Status workflow: Pending → Approved / Rejected
+- Approved By (auto-filled when approved)
+- Total Days (auto-calculated excluding weekends)
 
-From Date / To Date validation
-
-Leave Type (CL, SL, EL)
-
-Status workflow: Pending → Approved / Rejected
-
-Approved By (auto-filled when approved)
-
-Total Days (auto-calculated excluding weekends)
-
- ### Server-side validations
-From Date must be before To Date
-
-Maximum leave duration: 5 days
+### Server-side validations
+- From Date must be before To Date
+- Maximum leave duration: 5 days
 
 ### Client-side logic
-Auto-calculate Total Days excluding Saturday & Sunday
-
-Show info message when Leave Type = EL
-
-Custom Approve button
-
-Visible only to HR Manager when status = Pending
-
-Sets Status = Approved and Approved By = current user
+- Auto-calculate Total Days excluding Saturday & Sunday
+- Show info message when Leave Type = EL
+- Custom Approve button
+  - Visible only to HR Manager when status = Pending
+  - Sets Status = Approved and Approved By = current user
 
 ### Script Report: Leave Summary by Employee
-Employee
+- Employee
+- Total Leave Requests
+- Approved Leaves
+- Rejected Leaves
+- Grouped by Employee
 
-Total Leave Requests
+---
 
-Approved Leaves
+## Screenshots
 
-Rejected Leaves
-
-Grouped by Employee
-
-### Screenshots
-Leave Request Doc
+### Leave Request Doc
 <img src="Screenshot/Leave_request_doc.png" alt="Leave Request Doc" />
 
-Approved
+### Approved
 <img src="Screenshot/approved.png" alt="Leave Request Doc Approved" />
 
-Rejected
+### Rejected
 <img src="Screenshot/rejected.png" alt="Leave Request Doc Rejected" />
 
-Pending
+### Pending
 <img src="Screenshot/pending.png" alt="Leave Request Doc Pending" />
 
-Earned Leave Message
+### Earned Leave Message
 <img src="Screenshot/EL Message throw.png" alt="Leave Request Doc Earn Leave msg" />
 
-Leave Summary Report
+### Leave Summary Report
 <img src="Screenshot/leave_summary_report.png" alt="Leave Summary Report" />
 
-Print View of Report
+### Print View of Report
 <img src="Screenshot/print_view.png" alt="Print View of Report" />
-
-
